@@ -33,7 +33,7 @@
       }
 
       static function deleteAll() {
-        $_SESSION['all_contacts'];
+        Contact::deleteAll();
       }
 
       function save() {
