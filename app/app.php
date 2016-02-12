@@ -13,7 +13,6 @@
     }
 
     $app->get("/", function() use ($app) {
-      print_r($_SESSION['list_of_contacts']);
       return $app['twig']->render('home.html.twig', array('all_contacts' => $_SESSION['list_of_contacts']));
     });
 
