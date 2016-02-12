@@ -13,7 +13,7 @@
     }
 
     $app->get("/", function() use ($app) {
-      return $app['twig']->render('home.html.twig', array('all_contacts' => $_SESSION['list_of_contacts']));
+      return $app['twig']->render('home.html.twig', array('all_contacts' => Contact::getAll()));
     });
 
     $app->post("/create_contact", function() use ($app) {
