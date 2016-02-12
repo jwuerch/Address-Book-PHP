@@ -42,8 +42,8 @@
       {% for contact in all_contacts %}
         <ul><li>{{ contact.getName }}</li>
           <ul>
-            <li> {{ contact.getPhone}}</li>
-            <li> {{ contact.getAddress }}</li>
+            <li>Phone: {{ contact.getPhone}}</li>
+            <li>Address: {{ contact.getAddress }}</li>
           </ul>
         </ul>
       {% endfor %}
