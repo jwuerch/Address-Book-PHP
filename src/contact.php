@@ -37,11 +37,11 @@
       }
 
       function save() {
-        array_push($_SESSION['all_contacts'], $this);
+        array_push($_SESSION['list_of_contacts'], $this);
       }
 
       static function getAll() {
-        return $_SESSION['all_contacts'];
+        return $_SESSION['list_of_contacts'];
       }
   }
 
