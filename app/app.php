@@ -14,7 +14,7 @@
 
     $app->get("/", function() use ($app) {
       print_r($_SESSION['all_contacts']);
-      return $app['twig']->render('home.html.twig');
+      return $app['twig']->render('home.html.twig', array('all_contacts' => $_SESSION['all_contacts']));
     });
 
     $app->post("/new_contact", function() use ($app) {

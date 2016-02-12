@@ -4,33 +4,51 @@
     <meta charset="utf-8">
     <title>Create Your Own Address Book</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
   </head>
   <body>
     <div class="container-fluid">
       <h1>Welcome!</h1>
       <h3>Go ahead and create your own address book using the forms below.</h3>
       <br>
-      <form action="/new_contact" method="post">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" class="form-control">
-        </div>
+      <div class="row">
+        <div class="col-md-5">
+          <form action="/new_contact" method="post">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" class="form-control" required>
+            </div>
 
-        <div class="form-group">
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="number" class="form-control">
-        </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="text" class="form-control" required>
+            </div>
 
-        <div class="form-group">
-          <label for="address">Address</label>
-          <input id="address" name="address" type="text" class="form-control">
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input id="address" name="address" type="text" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-
+      </div>
       <form action="/delete_all" method="post">
-        <button class="btn btn-danger" type="submit">Delete All</button>
+        <button class="btn btn-danger deletebtn" type="submit">Delete All</button>
       </form>
+
+      <br>
+      <h4>Here are your current contacts:</h4>
+      {% for contact in all_contacts %}
+        <ul><li>{{ contact.getName }}</li>
+          <ul>
+            <li> {{ contact.getPhone}}</li>
+            <li> {{ contact.getAddress }}</li>
+          </ul>
+        </ul>
+      {% endfor %}
+
+
+
     </div>
 
   </body>
