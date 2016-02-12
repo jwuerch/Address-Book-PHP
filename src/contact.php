@@ -37,7 +37,7 @@
       }
 
       function save() {
-        array_push($_SESSION['all_contacts'}, $this]);
+        array_push($_SESSION['all_contacts'], $this);
       }
 
       static function getAll() {
