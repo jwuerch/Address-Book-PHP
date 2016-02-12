@@ -13,6 +13,7 @@
     }
 
     $app->get("/", function() use ($app) {
+      print_r($_SESSION['all_contacts']);
       return $app['twig']->render('home.html.twig');
     });
 
@@ -21,6 +22,11 @@
       $my_contact->save();
       return $app['twig']->render('new_contact.html.twig', array('new_contact' => $my_contact));
     });
+
+    $app->post("/delete_all", function() use ($app) {
+      $_SESSION['all_contacts'] = array();
+      return $app['twig']->render('delete_all.html.twig')
+    }
 
     return $app;
 
