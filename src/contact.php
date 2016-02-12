@@ -31,6 +31,18 @@
         $this->phone = $new_phone;
         $this->address = $new_address;
       }
+
+      static function deleteAll() {
+        $_SESSION['all_contacts'];
+      }
+
+      function save() {
+        array_push($_SESSION['all_contacts'}, $this]);
+      }
+
+      static function getAll() {
+        return $_SESSION['all_contacts'];
+      }
   }
 
  ?>
