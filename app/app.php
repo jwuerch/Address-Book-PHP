@@ -25,8 +25,8 @@
 
     $app->post("/delete_all", function() use ($app) {
       $_SESSION['all_contacts'] = array();
-      return $app['twig']->render('delete_all.html.twig')
-    }
+      return $app['twig']->render('delete_all.html.twig');
+    });
 
     return $app;
 
