@@ -1,16 +1,22 @@
-# Readme File
+# Address Book
 
-## About The Author
-
-The author is Jason Wuerch. He is currently located in Portland, Oregon as an up-and-coming programmer.
-
-## Address Book
-
-This project was made at Epicodus Coding School and is the first project of week 1 for the PHP class.
+By Jason Wuerch
 
 ## Description
 
 This project allows you to create an address book to delete and and contacts.
+
+## Installation Instructions
+
+* _Clone this repository._
+* _Navigate into directory and type in 'composer install' in terminal._
+* _Navigate to the web folder via terminal and type in 'php -S localhost:8000.'_
+* _Open web browser and type in 'localhost:8000' in address bar._
+* _Delete and add contacts as desired._
+
+## Technologies Used
+
+_Twig, Silex, PHP_
 
 ## Copyright and License Information
 
